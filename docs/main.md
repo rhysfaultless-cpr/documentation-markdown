@@ -157,20 +157,31 @@ You should be able to ping devices like the robot's computer by entering `ping 1
 
 ## Logging into the ROS computer
 
-1.  Turn on the computer monitor in the cab
-2.  Remove the wireless keyboard from the cab's right footwell, and turn the keyboard's stitch to GREEN
-3.  Enter the computer's username and password.
+1.  Make sure the Robot is on.
+2.  Turn on the computer monitor in the cab.
+3.  Remove the wireless keyboard from the cab's right footwell, and turn the keyboard's switch to GREEN
+4.  Enter the computer's username and password.
+    The defaults from factory are:
     - username: _administrator_
     - password: _clearpath_
+5.  Once logged in, open a terminal.
+    Take note of the computer's hostname.
+    You should see something like `administrator@cpr-wat-79`.
+    The text after the _@_ symbol is the computers hostname, in this case it is _cpr-wat79_.
 
 ## Connecting to the ROS computer from a development desktop
 
 1.  Connect your development desktop to the Base Station's SSID
-    - SSID: _TODO_
-    - password: _TODO_
+    - SSID: _cpr-base-station_
+    - password: _clearpath_
 2.  Add this information to your development desktop's _/etc/hosts_ file:
     ```
-    cpr-wat79  192.168.131.1
+    <robot computer's hostname>  192.168.131.1
+    ```
+    
+    for example:
+    ```
+    cpr-wat79 192.168.131.1
     ```
 
 ## Adding ROS packages to your development desktop
