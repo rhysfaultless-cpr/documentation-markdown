@@ -6,9 +6,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
 
 # built files
-/docs/main.pdf
 /docs/main.PDF
 /docs/main.png
 /docs/main.PNG
