@@ -44,8 +44,8 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 | 192.168.131.20    | Velodyne Puck               | Front Bumper                       |
 | 192.168.131.21    | Velodyne Puck               | Rear Enclosure                     |
 | 192.168.131.30    | Swift Navigation Duro       | Base Station                       |
-| 192.168.131.31    | Swift Navigation Duro       | Right side of the robot             |
-| 192.168.131.32    | Swift Navigation Duro       | Left side of the robot            |
+| 192.168.131.31    | Swift Navigation Duro       | Right side of the robot            |
+| 192.168.131.32    | Swift Navigation Duro       | Left side of the robot             |
 | 192.168.131.50    | Microhard Access Point      | Base Station                       |
 | 192.168.131.51    | Microhard Client            | Rear Enclosure                     |
 | USB               | Zed 2i                      | Front Bumper                       |
@@ -107,13 +107,32 @@ This is then republished as a _cmd_vel_ rostopic.
 
 There are a list of dependencies for the vehicle to drive using the FORT controller:
 
-1.  The GEM must be turned on
-2.  All motion-stop buttons need to be released
-3.  The FORT controller must be turned on
-4.  The dataspeed kit needs to be operating and connected to the vehicle
-5.  The ROS computer must be operating, and connected to the dataspeed kit
-6.  The ROS conputer needs to have launched properly, and translating correctly
-    joystick -> joystick rostopic -> cmd_vel rostopic -> dataspeed topics
+1.  The GEM must be turned on.
+2.  All motion-stop buttons need to be released.
+3.  The FORT controller must be turned on.
+4.  The Dataspeed kit needs to be operating and connected to the vehicle.
+5.  The ROS computer must be operating, and connected to the Dataspeed kit.
+6.  The ROS conputer needs to have launched properly, and translating correctly:
+
+    joystick -> joystick rostopic -> cmd_vel rostopic -> Dataspeed topics
+
+Assuming these dependencies are met; you can drive the vehicle by:
+
+1.  Holding the FORT Robotics controller.
+2.  Make sure the controller is on, and the motion-stop button is released.
+3.  Read the screen to make sure the controller is not paused.
+    You may need to press the pause button _||_ and _1_.
+4.  Hold _2_ to place the vehicle in _drive-by-wire_ mode.
+    You will hear the vehicle press the brake pedal when ROS has taken control.
+5.  Press and hold _1_.
+    This is the motion-enable / deadman button.
+    You will need to hold this button for ROS to recognize controller input as valid.
+6.  While holding _1_, use the left joystick to drive the vehicle.
+    Note that reverse commands may seem unintuitive.
+    This is because ROS is not commanding left and right, it is commanding positive or negative yaw.
+
+| **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at it's current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Turning on the Base Station
 
@@ -123,7 +142,7 @@ The robot can connect to all its static IP devices while the Base Station is off
 
 You can power the Base Staion using either a battery or the wall adaptor.
 You can change between battery and wall power by opening the Base Station and swapping the red-and-black cables.
-After connecting the battery of wall-adaptor, you can turn on the Base Station by pressing the silver button on the outside of the case.
+After connecting the battery or wall-adaptor, you can turn on the Base Station by pressing the silver button on the outside of the case.
 The silver button should illuminate blue.
 
 You can check that the base station is running by going to your development computer, and looking for :
@@ -141,8 +160,8 @@ You should be able to ping devices like the robot's computer by entering `ping 1
 1.  Turn on the computer monitor in the cab
 2.  Remove the wireless keyboard from the cab's right footwell, and turn the keyboard's stitch to GREEN
 3.  Enter the computer's username and password.
-    -   username: _administrator_
-    -   password: _clearpath_
+    - username: _administrator_
+    - password: _clearpath_
 
 ## Connecting to the ROS computer from a development desktop
 
@@ -153,7 +172,7 @@ You should be able to ping devices like the robot's computer by entering `ping 1
     ```
     cpr-wat79  192.168.131.1
     ```
-    
+
 ## Adding ROS packages to your development desktop
 
 ##
