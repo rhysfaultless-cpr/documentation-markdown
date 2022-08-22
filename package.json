@@ -6,6 +6,7 @@
     "format-write": "prettier --write docs README.md"
   },
   "devDependencies": {
+    "markdown-pdf": "^11.0.0",
     "prettier": "2.7.1"
   }
 }
