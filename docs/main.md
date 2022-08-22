@@ -33,6 +33,8 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
   - Antenna
   - USB-mini charger
 
+<div class="page"/>
+
 ## Specifications
 
 ## Devices addresses
