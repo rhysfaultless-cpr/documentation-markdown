@@ -16,11 +16,17 @@ This repository is used to produce PDF manuals for the Clearpath Robotics, Polar
     npm install
     ```
     This will install all the dependencies listed in the _package.json_.
-5.  In the terminal, run:
-    ```
-    npm run update-pdf
-    ```
-    The file main.pdf located in the _/docs_ directory will be updated once the command is finished running.
+5.  Open the VS Code extensions area.
+    Search or _Markdown PDF_, and install it.
+    <center>
+      <img src="/assets/images_readme/readme_1.png" width="800"/>
+    </center>
+6.  Open the file _/docs/main.md_
+7.  Right click in the code window, and select _Markdown PDF: Export (pdf)_.
+    <center>
+      <img src="/assets/images_readme/readme_2.png" width="800"/>
+    </center>
+8.  The PDF _/docs/main.pdf_ will be updated.
 
 ## Making updates
 
@@ -39,10 +45,7 @@ This repository is used to produce PDF manuals for the Clearpath Robotics, Polar
     ```
     npm run format
     ```
-6.  Update the PDF by running:
-    ```
-    npm run update-pdf
-    ```
+6.  Update the PDF, as described in the earlier section of this README.
 7.  Add the changed files, commit, and push changes to the remote repository.
 8.  Create a pull request and assign it to someone on the Clearpath Robotics team.
 
