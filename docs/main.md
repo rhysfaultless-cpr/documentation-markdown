@@ -105,7 +105,7 @@ You can see that the device's data in _/dev/js0_.
 Clearpth Robotics has configured the computer to publish this data to the _joystick_ rostopic.
 This is then republished as a _cmd_vel_ rostopic.
 
-There are a list o dependencies for the vehicle to drive using the FORT controller:
+There are a list of dependencies for the vehicle to drive using the FORT controller:
 
 1.  The GEM must be turned on
 2.  All motion-stop buttons need to be released
