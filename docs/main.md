@@ -44,8 +44,8 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 | 192.168.131.20    | Velodyne Puck               | Front Bumper                       |
 | 192.168.131.21    | Velodyne Puck               | Rear Enclosure                     |
 | 192.168.131.30    | Swift Navigation Duro       | Base Station                       |
-| 192.168.131.31    | Swift Navigation Duro       | Left side of the robot             |
-| 192.168.131.32    | Swift Navigation Duro       | Right side of the robot            |
+| 192.168.131.31    | Swift Navigation Duro       | Right side of the robot             |
+| 192.168.131.32    | Swift Navigation Duro       | Left side of the robot            |
 | 192.168.131.50    | Microhard Access Point      | Base Station                       |
 | 192.168.131.51    | Microhard Client            | Rear Enclosure                     |
 | USB               | Zed 2i                      | Front Bumper                       |
