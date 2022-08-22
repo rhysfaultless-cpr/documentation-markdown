@@ -147,7 +147,7 @@ The silver button should illuminate blue.
 
 You can check that the base station is running by going to your development computer, and looking for :
 
-- The Wi-Fi SSID: `cpr-base-station-WAT79`
+- The Wi-Fi SSID: `cpr-base-station`
 - The Wi-Fi password is `clearpath`
 
 Afer connecting, you can check our desktop's IP address by entering `ip a`.
