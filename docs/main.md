@@ -131,7 +131,7 @@ Assuming these dependencies are met; you can drive the vehicle by:
     Note that reverse commands may seem unintuitive.
     This is because ROS is not commanding left and right, it is commanding positive or negative yaw.
 
-| **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at it's current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
+| :warning: **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at it's current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Turning on the Base Station
@@ -194,4 +194,29 @@ You should be able to ping devices like the robot's computer by entering `ping 1
     This is necessary if your plan to exchange data between computers with ROS, or using tools like Rviz.
 ## Adding ROS packages to your development desktop
 
-##
+## Using the robot with OutdoorNav
+
+## Using the robot with other navigation packages
+
+## Turning off sensors for better network performance
+
+This robot connects to the Base Station over a 100 Mbit/s Wi-Fi radio.
+This connection speed is not sufficient to transfer the large amount of data from cameras like an Axis P3905-R Mk II, RealSense D435, or a Stereolabs ZED 2.
+You could choose to reduce the amount of data by reducing the rostopic frequency.
+
+Environment variables to turn these devices on and off can be found in `~/wat79_outdoornav_env.sh`.
+
+## Where to find documentation
+
+This manual is intended to be used by an experienced ROS developer. 
+AS such, we have tried to keep the manual brief by only covering common setup problems, and redirecting you to existing tutorials and documentation relevent to this robot.
+
+Contact our Support team at <support@clearpathrobotics.com> if you need any further information.
+
+1.  Polaris GEM e2 manual, 2016 - 2021: <https://cdn.polarisportal.com/servicemanagement-public/OwnerManuals/LEV/9928180r04_standard.pdf>
+2.  Dataspeed drive by wire kit: 
+    - <https://bitbucket.org/DataspeedInc/dbw_polaris_ros>
+    - <https://bitbucket.org/DataspeedInc/dataspeed_ulc_ros>
+    - An alternative driver, that has not been tested by Clearpath Robotics, <https://github.com/VT-ASIM-LAB/dataspeed_can_driver>
+3.  Clearpath Robotics, OutdoorNav UI manual, <https://clearpathrobotics.com/assets/manuals/outdoornav/index.html>
+4.  Clearpath Robotics, OutdoorNav API, <https://clearpathrobotics.com/assets/manuals/outdoornav/api_details.html>
