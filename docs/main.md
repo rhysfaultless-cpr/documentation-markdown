@@ -1,4 +1,4 @@
-# WAT79 user manual
+# Clearpath Robotics, Polaris GEM robotic vehicle
 
 This manual is intended to help you get started using your 2018 Polaris GEM robot.
 Wewill describe how to operate the vehicle as a robot, and will attempt to direct you to all the related documentation for the vehicle.
