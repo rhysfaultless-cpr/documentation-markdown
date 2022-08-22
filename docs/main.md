@@ -1,7 +1,31 @@
-# Clearpath Robotics, Polaris GEM robotic vehicle
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<center><h1>Clearpath Robotics, Polaris GEM robotic vehicle</h1></center>
+<center><h3>User Manual, 2022</h3></center>
+
+<br />
+
+<center>
+
+
+![image](../assets/images_docs/robot_overview.jpg)
+
+</center>
+
+<div class="page" />
+
+## Overview
 
 This manual is intended to help you get started using your 2018 Polaris GEM robot.
 Wewill describe how to operate the vehicle as a robot, and will attempt to direct you to all the related documentation for the vehicle.
+
+TODO, add pictures with hardware locations
 
 ## What's Included
 
@@ -33,7 +57,7 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
   - Antenna
   - USB-mini charger
 
-<div class="page"/>
+<div class="page" />
 
 ## Specifications
 
@@ -54,9 +78,23 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 | User Power             | 12 V, 24 V, VBAT ( 48 - 60 V )            |
 | Communication          | ROS Noetic ( Ethernet, USB, Serial, CAN ) |
 
-<div class="page"/>
+---
 
-## Devices addresses
+## Key Topics
+
+| Topics                               | Purpose                                      |
+| :----------------------------------- | :------------------------------------------- |
+| /cmd_vel                             | Input to the vehicle's kinematic controller. |
+| /vehicle/twist_odom                  | Odometry reported by Dataspeed kit           |
+| /piksi_position                      | GPS position, grouped from 3 sensors         |
+| /piksi_heading                       | GPS heading, grouped from 3 sensors          |
+| /piksi_position_pos_llh_cov          |                                              |
+| /piksi_position/debug/receiver state |                                              |
+| /velodyne_points                     | point cloud lidar data                       |
+
+<div class="page" />
+
+## Devices Addresses
 
 | IP address or bus | Device                      | Location on Robot                  |
 | :---------------- | :-------------------------- | :--------------------------------- |
@@ -76,11 +114,7 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 | USB               | Numato Relay Board          | Rear Enclosure                     |
 | USB               | Dataspeed Drive-By-Wire Kit | Inside Dashboard                   |
 
-## Key Topics
-
-| Topics   | Message Type        | Purpose                                      |
-| :------- | :------------------ | :------------------------------------------- |
-| /cmd_vel | geometry_msgs/Twist | Input to the vehicle's kinematic controller. |
+---
 
 ## Turning on the GEM
 
@@ -97,6 +131,8 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 5.  Turn on the FORT wireless controller
 6.  Twist the FORT wireless controller's motion-stop button clockwise to make sure it is released.
 7.  You should see the orange triangle disappear from the GEMs speedometer.
+
+<div class="page" />
 
 ## Motion Stops
 
@@ -158,8 +194,8 @@ Assuming these dependencies are met; you can drive the vehicle by:
     Note that reverse commands may seem unintuitive.
     This is because ROS is not commanding left and right, it is commanding positive or negative yaw.
 
-| :warning: **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at it's current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| :warning: **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at its current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## Turning on the Base Station
 
@@ -184,7 +220,7 @@ You should be able to ping devices like the robot's computer by entering `ping 1
 
 ## Logging into the ROS computer
 
-1.  Make sure the Robot is on.
+1.  Make sure the robot is on.
 2.  Turn on the computer monitor in the cab.
 3.  Remove the wireless keyboard from the cab's right footwell, and turn the keyboard's switch to GREEN
 4.  Enter the computer's username and password.
@@ -217,17 +253,29 @@ You should be able to ping devices like the robot's computer by entering `ping 1
 
 3.  Then in a terminal, enter `ping <robot computer's hostname>`, such as `ping cpr-wat79`.
     You should see respones, indicating that your desktop computer can contact the robot's computer through hostname.
-4.  Make sure your desktop computer has ROS Noeting installed. You can follow the instructions on [ros.org](http://wiki.ros.org/noetic/Installation/Ubuntu).
-5.  Connect your desktop computer's ROS session to the Robot's Master by entering `export ROS_MASTER_URI http://administrator@cpr-wat79:11311`, substituting in your correct hostname for _cpr-wat79_.
-6.  You should now be able to see all the robot's rostopics on your desktop computer. You can test this by running `rostopic list` on your desktop computer.
+4.  Make sure your desktop computer has ROS Noetic installed.
+    You can follow the instructions on [ros.org](http://wiki.ros.org/noetic/Installation/Ubuntu).
+5.  Connect your desktop computer's ROS session to the robot's Master by entering `export ROS_MASTER_URI http://administrator@cpr-wat79:11311`, substituting in your correct hostname for _cpr-wat79_.
+6.  You should be able to see all the robot's rostopics on your desktop computer.
+    You can test this by running `rostopic list` on your desktop computer.
 7.  You should also log into the robot's computer, and add your desktop computer's hostname to the robot's _/etc/hosts_ file.
     This is necessary if your plan to exchange data between computers with ROS, or using tools like Rviz.
 
 ## Adding ROS packages to your development desktop
 
+TODO
+
 ## Using the robot with OutdoorNav
 
+TODO
+
 ## Using the robot with other navigation packages
+
+TODO
+
+## Autonomy considerations for an Ackermann drive vehicle
+
+TODO
 
 ## Turning off sensors for better network performance
 
