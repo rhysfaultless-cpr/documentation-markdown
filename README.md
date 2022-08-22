@@ -2,7 +2,6 @@
 
 This repository is used to produce PDF manuals for the Clearpath Robotics, Polaris GEM robot platform.
 
-
 ## To produce a PDF:
 
 1.  Make sure you have Node.js installed on your computer, by running:
@@ -58,7 +57,7 @@ This repository is used to produce PDF manuals for the Clearpath Robotics, Polar
     - horizontal rules
 2.  Page breaks, by adding:
     ```html
-    <div class="page"/>
+    <div class="page" />
     ```
 3.  Including other Markdown files, by adding:
     ```markdown

@@ -134,7 +134,7 @@ Assuming these dependencies are met; you can drive the vehicle by:
     This is because ROS is not commanding left and right, it is commanding positive or negative yaw.
 
 | :warning: **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at it's current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ## Turning on the Base Station
 
@@ -177,23 +177,27 @@ You should be able to ping devices like the robot's computer by entering `ping 1
     - SSID: _cpr-base-station_
     - password: _clearpath_
 2.  Add this information to your development desktop's _/etc/hosts_ file:
+
     ```
     <robot computer's hostname>  192.168.131.1
     ```
 
     for example:
+
     ```
     cpr-wat79 192.168.131.1
     ```
 
     Close the file by entering `ctrl + x', selecting save by typing _Y_.
+
 3.  Then in a terminal, enter `ping <robot computer's hostname>`, such as `ping cpr-wat79`.
     You should see respones, indicating that your desktop computer can contact the robot's computer through hostname.
 4.  Make sure your desktop computer has ROS Noeting installed. You can follow the instructions on [ros.org](http://wiki.ros.org/noetic/Installation/Ubuntu).
 5.  Connect your desktop computer's ROS session to the Robot's Master by entering `export ROS_MASTER_URI http://administrator@cpr-wat79:11311`, substituting in your correct hostname for _cpr-wat79_.
 6.  You should now be able to see all the robot's rostopics on your desktop computer. You can test this by running `rostopic list` on your desktop computer.
-7.  You should also log into the robot's computer, and add your desktop computer's hostname to the robot's _/etc/hosts_ file. 
+7.  You should also log into the robot's computer, and add your desktop computer's hostname to the robot's _/etc/hosts_ file.
     This is necessary if your plan to exchange data between computers with ROS, or using tools like Rviz.
+
 ## Adding ROS packages to your development desktop
 
 ## Using the robot with OutdoorNav
@@ -210,13 +214,13 @@ Environment variables to turn these devices on and off can be found in `~/wat79_
 
 ## Where to find documentation
 
-This manual is intended to be used by an experienced ROS developer. 
+This manual is intended to be used by an experienced ROS developer.
 AS such, we have tried to keep the manual brief by only covering common setup problems, and redirecting you to existing tutorials and documentation relevent to this robot.
 
 Contact our Support team at <support@clearpathrobotics.com> if you need any further information.
 
 1.  Polaris GEM e2 manual, 2016 - 2021: <https://cdn.polarisportal.com/servicemanagement-public/OwnerManuals/LEV/9928180r04_standard.pdf>
-2.  Dataspeed drive by wire kit: 
+2.  Dataspeed drive by wire kit:
     - <https://bitbucket.org/DataspeedInc/dbw_polaris_ros>
     - <https://bitbucket.org/DataspeedInc/dataspeed_ulc_ros>
     - An alternative driver, that has not been tested by Clearpath Robotics, <https://github.com/VT-ASIM-LAB/dataspeed_can_driver>
