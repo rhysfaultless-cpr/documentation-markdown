@@ -3,11 +3,9 @@
   "version": "0.0.0",
   "private": false,
   "scripts": {
-    "format": "prettier --write docs README.md",
-    "update-pdf": "markdown-pdf docs/main.md"
+    "format": "prettier --write docs README.md"
   },
   "devDependencies": {
-    "markdown-pdf": "^11.0.0",
     "prettier": "2.7.1"
   }
 }
