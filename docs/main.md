@@ -43,6 +43,15 @@ We will describe how to operate the vehicle as a robot, and will attempt to dire
   </center>
 </figure>
 
+<figure>
+  <center>
+    <img src="../assets/images_docs/rear_enclosure.png" />
+  </center>
+  <figcaption>Left—2X Swift Navigation Duro receivers, FORT Robotics receiver, PoE injector <br /> Left Centre—Network switch, Wi-Fi Client, PCBA for Status Light, Relay for motion-stop <br /> Centre Right—Computer, Audio amplifier <br /> Right—Power supplies, Terminal blocks, Main contactor</figcaption>
+</figure>
+
+<div class="page" />
+
 ## What's Included
 
 - Polaris GEM robot
@@ -160,7 +169,58 @@ The intention of the motion-stop system is to prevent the vehicle from driving f
 There are 5 motion-stop buttons on the vehicle, and 1 stop button on the FORT controller.
 All 6 buttons will need to be released, and have the FORT controller on, or the GEM will not drive.
 
-## Driving the GEM manually
+## Checking the brake fluid
+
+The vehicle stops using hydraulig brakes, similar to a car.
+This system required a full reservoir of DOT 4 brake fluid to function properly.
+
+:warning: **WARNING:** This system will not stop the vehicle if it does not have enough fluid, or if there is a lage leak in any of the brake lines.
+
+Before using the vehicle:
+
+1. Check the fluid level.
+   You can see the reservoir through the front-left wheel well.
+   Add fluid if necessary. (Note that you will need to remove the hood to add fluid)
+2. Check that the brake pedal is firm, and does not contact the floor when you press on the pedal.
+3. Check that the brake lights turn on when you press the brake pedal.
+
+<figure>
+  <center>
+    <img src="../assets/images_docs/brake_reservoir.jpg" />
+    <figcaption>Brake reservoir, with yellow fluid, visible behind the front-left spring</figcaption>
+  </center>
+</figure>
+
+<div class="page" />
+
+## Charging the vehicle
+
+There is an access cover on the front hood, near the windshield.
+Connect a NEMA5-15 extension cord between a 110 VAC outlet and the vehicle.
+
+:warning: **WARNING:** Use a functioning GFCI outlet, or the included GFCI extension cord to prevent shocks or electrocution.
+
+<figure>
+  <center>
+    <img src="../assets/images_docs/charge_port.jpg" />
+    <figcaption>Hood—NEMA5-15 jack, Thumb screws for removing the hood, Hidden ignition disable switch</figcaption>
+  </center>
+</figure>
+
+## Removing the hood
+
+1. Remove the two thumbscrews shown in the picture above.
+2. Pull the hood towards the front of the vehicle.
+   You can grab the hood near the two headlights.
+3. This pill remove the hood's 6 clips from their rubber-grommets on the vehicle.
+
+## Hidden disable switch
+
+The switch is visible in the picture above.
+This swith is in series with the standard igintion switch on the steering column.
+This switch needs to be flipped up, or the vehicle will not turn on.
+
+## Driving the vehicle manually
 
 1.  Turn on the GEM, release the motion-stop buttons, and turn on the FORT wireless controller.
 2.  There is a swtich on the dashboard labeled _F-N-R_.
@@ -169,6 +229,8 @@ All 6 buttons will need to be released, and have the FORT controller on, or the 
     - Steering Wheel
     - Accelerator Pedal
     - Brake Pedal
+
+<div class="page" />
 
 NOTE: the GEM can be registered as a leagal road vehicle on Ontario Canada.
 Clearpath Robotics has not gone through the process to register and insure this vehicle in Ontario.
@@ -207,10 +269,18 @@ Assuming these dependencies are met; you can drive the vehicle by:
     Note that reverse commands may seem unintuitive.
     This is because ROS is not commanding left and right, it is commanding positive or negative yaw.
 
-| :warning: **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at its current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything. |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+:warning: **WARNING:** motion-stops or losing radio signal will cause the vehicle to go into a stop-state. This state means the vehicle will coast at its current velocity. Care should be taken so this does not cause the vehicle to strike anyone or anything.
+
+<div class="page" />
 
 ## Turning on the Base Station
+
+<figure>
+  <center>
+    <img src="../assets/images_docs/base_station.png" width="250"/>
+    <figcaption>Base Station with GPS</figcaption>
+  </center>
+</figure>
 
 The Base Station is required for connecting to the robot's computer remotely.
 The base station includes a wireless Access Point that is the primary DHCP server for the robot.
@@ -230,6 +300,8 @@ Afer connecting, you can check our desktop's IP address by entering `ip a`.
 You should see an address like `192.168.131.xxx`.
 
 You should be able to ping devices like the robot's computer by entering `ping 192.168.131.1`.
+
+<div class="page" />
 
 ## Logging into the ROS computer
 
@@ -274,6 +346,8 @@ You should be able to ping devices like the robot's computer by entering `ping 1
 7.  You should also log into the robot's computer, and add your desktop computer's hostname to the robot's _/etc/hosts_ file.
     This is necessary if your plan to exchange data between computers with ROS, or using tools like Rviz.
 
+<div class="page" />
+
 ## Adding ROS packages to your development desktop
 
 TODO
@@ -297,6 +371,8 @@ This connection speed is not sufficient to transfer the large amount of data fro
 You could choose to reduce the amount of data by reducing the rostopic frequency.
 
 Environment variables to turn these devices on and off can be found in `~/wat79_outdoornav_env.sh`.
+
+<div class="page" />
 
 ## Where to find documentation
 
