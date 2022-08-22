@@ -6,3 +6,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# built files
+/docs/main.pdf
+/docs/main.PDF
+/docs/main.png
+/docs/main.PNG
+/docs/main.jpg
+/docs/main.JPG
+/docs/main.jpeg
+/docs/main.JPEG
+/docs/main.html
+/docs/main.HTML
