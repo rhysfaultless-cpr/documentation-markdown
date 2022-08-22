@@ -57,11 +57,14 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 
 ## Turning on the GEM
 
-1.  Make sure the hidden disable switch is in the RUN position
-2.  Turn the ignition key to the RUN position, similar to a car
+1.  Make sure the hidden disable switch is in the RUN position.
+    This switch is located beside the charge port, on the hood of the vehicle.
+2.  Turn the ignition key to the RUN position, similar to a car.
 3.  Wait up to 1 minute for devices to turn on.
     You will hear relays clicking, and the 2 dashpard monitors starting to boot.
-    Notice that the speedometer has a orange triagle ilu
+    Notice that the speedometer has a orange triagle iluminated.
+    This triange indicates that there is a fault with the vehicle's CANbus.
+    This is typical behaviour, since the vehicle is in a motion-stop state.
 4.  Once the GEM is on, check that the 5 motion-stop buttons have been released.
     You can check by twisting each of the 5 buttons clockwise.
 5.  Turn on the FORT wireless controller
