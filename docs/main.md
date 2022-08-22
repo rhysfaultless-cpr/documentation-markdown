@@ -8,11 +8,11 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 - Polaris GEM robot
   - 2018 GEM e2
   - Dataspeed Drive-By-Wire conversion kit
-  - Clearpath Robotics ROS computer
+  - Clearpath Robotics ROS computer to Nvidia 1050 graphics card
   - Manual motion-stop system
-    - 100 metre range E-stop and mobility remote control
+    - wireless-stop and mobility remote control
     - 5X motion-stop buttons (4 outside corners of the GEM, and on the dashboard)
-  - 100 metre range Wi-Fi (100 Mbit/s)
+  - Wi-Fi (100 Mbit/s)
   - Integrated sensors
     - 2X _Velodyne Puck_ lidar, front and rear
     - _Zed 2i_ stereo camera
@@ -24,7 +24,7 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
     - Stack light and dash lights to show ROS states
     - Speakers, connected to the computer
 - Clearpath Robotics Base Station
-  - 100 metre range Wi-Fi (100 Mbit/s)
+  - Wi-Fi (100 Mbit/s)
   - _Swift Navigation Duro_ GPS (Global Positioning System) for RTK (Real Time Kinematics) corrections
   - Wall charger and batteries
 - NEMA 5-15 extension cable, for charging the GEM
@@ -36,6 +36,25 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 <div class="page"/>
 
 ## Specifications
+
+| Specification          | Measurement                               |
+| :--------------------- | :---------------------------------------- |
+| Length                 | 2620 mm                                   |
+| Width                  | 1410 mm                                   |
+| Height                 | 2300 mm                                   |
+| Wheelbase Length       | 1753 mm                                   |
+| Wheelbase Width        | 1045 mm                                   |
+| Ground Clearance       | 2030 mm                                   |
+| Mass                   | 650 kg                                    |
+| Allowable Payload      | 250 kg                                    |
+| Speed, Maximum         | 11.1 m/s (40 km/h)                        |
+| Speed, Minimum ( ROS ) | 0.3 m/s                                   |
+| Battery                | lead-acid                                 |
+| Range                  | Up to 25 km                               |
+| User Power             | 12 V, 24 V, VBAT ( 48 - 60 V )            |
+| Communication          | ROS Noetic ( Ethernet, USB, Serial, CAN ) |
+
+<div class="page"/>
 
 ## Devices addresses
 
@@ -56,6 +75,12 @@ Wewill describe how to operate the vehicle as a robot, and will attempt to direc
 | USB               | FORT wireless controller    | Rear Enclosure                     |
 | USB               | Numato Relay Board          | Rear Enclosure                     |
 | USB               | Dataspeed Drive-By-Wire Kit | Inside Dashboard                   |
+
+## Key Topics
+
+| Topics   | Message Type        | Purpose                                      |
+| :------- | :------------------ | :------------------------------------------- |
+| /cmd_vel | geometry_msgs/Twist | Input to the vehicle's kinematic controller. |
 
 ## Turning on the GEM
 
