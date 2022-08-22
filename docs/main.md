@@ -178,12 +178,20 @@ You should be able to ping devices like the robot's computer by entering `ping 1
     ```
     <robot computer's hostname>  192.168.131.1
     ```
-    
+
     for example:
     ```
     cpr-wat79 192.168.131.1
     ```
 
+    Close the file by entering `ctrl + x', selecting save by typing _Y_.
+3.  Then in a terminal, enter `ping <robot computer's hostname>`, such as `ping cpr-wat79`.
+    You should see respones, indicating that your desktop computer can contact the robot's computer through hostname.
+4.  Make sure your desktop computer has ROS Noeting installed. You can follow the instructions on [ros.org](http://wiki.ros.org/noetic/Installation/Ubuntu).
+5.  Connect your desktop computer's ROS session to the Robot's Master by entering `export ROS_MASTER_URI http://administrator@cpr-wat79:11311`, substituting in your correct hostname for _cpr-wat79_.
+6.  You should now be able to see all the robot's rostopics on your desktop computer. You can test this by running `rostopic list` on your desktop computer.
+7.  You should also log into the robot's computer, and add your desktop computer's hostname to the robot's _/etc/hosts_ file. 
+    This is necessary if your plan to exchange data between computers with ROS, or using tools like Rviz.
 ## Adding ROS packages to your development desktop
 
 ##
