@@ -9,7 +9,6 @@ yarn-error.log*
 package-lock.json
 
 # built files
-/docs/main.PDF
 /docs/main.png
 /docs/main.PNG
 /docs/main.jpg
