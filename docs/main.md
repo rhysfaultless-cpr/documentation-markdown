@@ -79,7 +79,7 @@ The vehicle will coast to a stop.
 
 NOTE: The vehicle does not have a fail-safe brake.
 The vehicle has a low friction drivetrain, so it will not slow down quickly from a motion-stop event.
-The intention of the motion-stop system is to prevent the vehicle from driving, while you are working near it.
+The intention of the motion-stop system is to prevent the vehicle from driving from ROS commands while you are working near it.
 
 There are 5 motion-stop buttons on the vehicle, and 1 stop button on the FORT controller.
 All 6 buttons will need to be released, and have the FORT controller on, or the GEM will not drive.
