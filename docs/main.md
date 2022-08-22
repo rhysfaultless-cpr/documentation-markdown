@@ -89,12 +89,12 @@ All 6 buttons will need to be released, and have the FORT controller on, or the 
 1.  Turn on the GEM, release the motion-stop buttons, and turn on the FORT wireless controller.
 2.  There is a swtich on the dashboard labeled _F-N-R_.
     Press the _F_ state to put the vehicle in _Forward_ drive.
-3.  You can now drive the GEM similarly to other road vehicles, with the:
+3.  You can now drive the GEM similarly to other road vehicles, using the:
     - Steering Wheel
     - Accelerator Pedal
     - Brake Pedal
 
-NOTE: the GEM can be registered as a leagal road vehicle on Ontario.
+NOTE: the GEM can be registered as a leagal road vehicle on Ontario Canada.
 Clearpath Robotics has not gone through the process to register and insure this vehicle in Ontario.
 You should review your local rules for this class of vehicle, and ensure that you can operate it at your workplace.
 
