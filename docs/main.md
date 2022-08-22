@@ -12,10 +12,7 @@
 <br />
 
 <center>
-
-
-![image](../assets/images_docs/robot_overview.jpg)
-
+  <img src="../assets/images_docs/robot_overview.jpg" />
 </center>
 
 <div class="page" />
@@ -23,9 +20,28 @@
 ## Overview
 
 This manual is intended to help you get started using your 2018 Polaris GEM robot.
-Wewill describe how to operate the vehicle as a robot, and will attempt to direct you to all the related documentation for the vehicle.
+We will describe how to operate the vehicle as a robot, and will attempt to direct you to all the related documentation for the vehicle.
 
-TODO, add pictures with hardware locations
+<figure>
+  <center>
+    <img src="../assets/images_docs/robot_front.jpg" />
+    <figcaption>Front bumper—Velodyne Puck 3d lidar, and Stereolabs ZED 2i camera</figcaption>
+  </center>
+</figure>
+
+<figure>
+  <center>
+    <img src="../assets/images_docs/robot_top.jpg" />
+    <figcaption>Inside cab—Axis teleoperation camera near rearview mirror <br /> Top—two GPS antenna, Wi-Fi antenna, FORT mobility antenna, and Status Light</figcaption>
+  </center>
+</figure>
+
+<figure>
+  <center>
+    <img src="../assets/images_docs/robot_rear.jpg" />
+    <figcaption>Rear—Electronics enclosure with Velodyne Puck</figcaption>
+  </center>
+</figure>
 
 ## What's Included
 
@@ -53,9 +69,6 @@ TODO, add pictures with hardware locations
   - Wall charger and batteries
 - NEMA 5-15 extension cable, for charging the GEM
 - FORT case with motion remote controller
-  - Motion Controller
-  - Antenna
-  - USB-mini charger
 
 <div class="page" />
 
@@ -299,3 +312,14 @@ Contact our Support team at <support@clearpathrobotics.com> if you need any furt
     - An alternative driver, that has not been tested by Clearpath Robotics, <https://github.com/VT-ASIM-LAB/dataspeed_can_driver>
 3.  Clearpath Robotics, OutdoorNav UI manual, <https://clearpathrobotics.com/assets/manuals/outdoornav/index.html>
 4.  Clearpath Robotics, OutdoorNav API, <https://clearpathrobotics.com/assets/manuals/outdoornav/api_details.html>
+
+## Support
+
+Clearpath is committed to your success.
+Please get in touch with us and we will do our best to get you rolling again quickly: <support@clearpathrobotics.com>.
+
+To get in touch with a salesperson regarding Clearpath Robotics products, please email <sales@clearpathrobotics.com>.
+
+If you have an issue that is specifically about ROS and is something which may be of interest to the broader community, consider asking it on <https://answers.ros.org>.
+If you do not get a satisfactory response, please ping us and include a link to your question as posted there.
+If appropriate, we will answer in the ROS Answers context for the benefit of the community.
