@@ -68,4 +68,4 @@ This repository is used to produce PDF manuals for the Clearpath Robotics, Polar
     ```
     This is a relative path, so it is best to save your markdown files in the same directory as main.md
 
-A list of other Markdown PDF commands can be found at <https://github.com/alanshaw/markdown-pdf>
+A list of other Markdown PDF commands can be found at <https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf>
