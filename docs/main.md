@@ -22,6 +22,6 @@
 
 ## Example h2 header
 
-| Column 1 Header | Column 2 Header |
-| :-: | :-- |
+|   Column 1 Header    | Column 2 Header           |
+| :------------------: | :------------------------ |
 | Text that is centred | Text that is left aligned |
